@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>영화 투표</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>참좋은 오늘의 영화 투표</h1>
+        <div class="movie-list">
+            <div class="movie" onclick="vote('movie1', this)">
+                <img src="movie1.jpeg" alt="배드 가이즈">
+                <h3>배드 가이즈</h3>
+                <span class="vote-count hidden" id="vote-count-movie1">투표수: 0</span>
+                <!-- <div>
+                    <button>투표</button>
+                    <span class="vote-count hidden" id="vote-count-movie1">투표수: 0</span>
+                </div> -->
+                <!--사진 밑에 버튼을 생성하고 싶으면 주석을 해제하면 된다. -->
+            </div>
+            <div class="movie" onclick="vote('movie2', this)">
+                <img src="movie2.jpeg" alt="오즈의 마법사">
+                <h3>오즈의 마법사</h3>
+                <span class="vote-count hidden" id="vote-count-movie2">투표수: 0</span>
+            </div>
+            <div class="movie" onclick="vote('movie3', this)">
+                <img src="movie3.jpeg" alt="라테와 마법의 돌">
+                <h3>라테와 마법의 돌</h3>
+                <span class="vote-count hidden" id="vote-count-movie3">투표수: 0</span>
+            </div>
+            <div class="movie" onclick="vote('movie4', this)">
+                <img src="movie4.png" alt="넛잡 땅콩 도둑들">
+                <h3>넛잡 땅콩 도둑들</h3>
+                <span class="vote-count hidden" id="vote-count-movie4">투표수: 0</span>
+            </div>
+        </div>
+        <button onclick="showResult()">결과 보기</button>
+        <span id="total-votes">총 투표수: 0</span>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
